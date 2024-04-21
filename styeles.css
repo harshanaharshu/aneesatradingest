@@ -1,0 +1,645 @@
+body {
+    margin: 0;
+  }
+/*---------------------------------z-index---------------------------------*/  
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+/*---------------------------------logo---------------------------------*/
+.logo{
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(rgba(248, 242, 242, 0.664),rgba(31, 1, 1, 0.493)),url('uaepic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.logo img{
+  width: 150px;
+  height: 130px;
+  display: flex;
+
+}
+
+.logotext-container{
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 90px;
+  color: #d81204;
+  background-color: #ebdfdf6c;
+  font-family: 'Lalezar', system-ui;
+  text-align: start;
+  padding-left:80px;
+  animation: slide-in 2s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media(max-width:700px){
+  .logotext-container{
+    font-size: 30px;
+    text-align: start;
+    padding-left: 80px;
+  }
+.logo img{
+  width: 80px;
+  height: 70px;
+}
+.logo
+{
+  height: 35vh;
+}
+
+}
+
+
+/*---------------------------------image slider---------------------------------*/
+.bakgrdimgtop{
+  height: 100vh;
+  
+}
+.image-container {
+  height: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+ 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(252, 252, 252);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(243, 3, 3, 0.8);
+}
+
+/* Caption text */
+.text {
+  color:rgb(250, 246, 246);
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 80%;
+  text-align: center;
+  font-family: 'Lalezar';
+  background-color:#d81204;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fa6a6a;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ec0a0a;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+@media(max-width:600px){
+  .mySlides img{
+    height: 280px;
+  }
+  .text{
+    font-size: 15px;
+  }
+ .dot{
+  height:10px;
+  width: 10px;
+ }
+ 
+}
+
+/*---------------------------------hr line---------------------------------*/
+.hr-line{
+  background-color:#d81204;
+  height:2px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+.hr-line{
+  animation: html 8s infinite;
+  width: 10%;
+}
+
+@keyframes html{
+  from{
+      width:-0;
+  }
+  to{
+      width: 90%;
+  }
+}
+
+
+
+@media(max-width:600px){
+
+  .hr-line{
+    height: 2px;
+    margin-top: -100px;
+   
+}
+  .hr-line{
+    animation: html 3s infinite;
+    width: 10%;
+}
+@keyframes html{
+    from{
+        width:-0;
+    }
+    to{
+        width: 70%;
+    }
+}
+
+}
+
+
+
+/*---------------------------------welcome---------------------------------*/
+.welcome{
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  
+}
+.welcome h1{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Cinzel', serif;
+  color: #d81204;
+  
+}
+.welcome p{
+  text-align: start;
+  font-size: 25px;
+  font-family: 'Philosopher', sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: #d81204;
+}
+
+@media(max-width:900px){
+  .welcome h1{
+    font-size: 25px;
+
+  }
+
+  .welcome p{
+    font-size: 15px;
+  }
+}
+
+@media(max-width:600px){
+  hr{
+    margin-top: -150px;
+  }
+  
+}
+/*---------------------------------topcategories---------------------------------*/
+
+.categories{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: start;
+  padding-top: 20px;
+  color: rgb(19, 20, 20);
+  height: 70vh;
+ 
+}
+.categories h2{
+  margin-bottom: 50px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  color: #d81204;
+  font-family: 'Cinzel', serif;
+  font-size: 35px;
+}
+.gallery {
+  border: 2px solid #080808;
+  border-radius: 25px;
+  background: linear-gradient(red,black,red,black,red);
+  color: #f5f5f5;
+  font-family: 'Philosopher', sans-serif;
+}
+
+.gallery:hover {
+  border: 3px solid #d81204;
+  border-radius: 25px;
+  border-style: groove;
+}
+.gallery img {
+  width: 100%;
+  height: 240px;
+  border-radius: 23px;
+  
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+.responsive {
+  float: left;
+  width: 24.99999%;
+  padding-left: 20px;
+ 
+}
+
+@media(max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+    display: block;
+    margin-left: -20px;
+  }
+}
+
+@media(max-width: 1100px) {
+  .responsive {
+    width: 100%;
+    display: block;
+    margin-left:-20px;
+    margin-bottom: 20px;
+    
+  }
+  .gallery img {
+    width: 100%;
+    height:260px;
+    border-radius: 23px;
+    
+  }
+}
+
+
+.clickhere{
+  text-align: start;
+  padding-bottom: 100px;
+  padding-left: 50px;
+
+}
+.clickhere button{
+  background-color:white;
+  border: 2px solid #d81204;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-family: 'Philosopher', sans-serif;
+}
+.clickhere button:hover{
+  background-color:#d81204;
+  font-size: 20px;
+ 
+  color: white;
+}
+
+/*---------------------------------our services---------------------------------*/
+.bakgrdimgforour-container{
+  height: 100vh;
+  background: linear-gradient(rgba(173, 5, 5, 0.8),rgba(231, 3, 3, 0.8),rgba(15, 15, 15, 0.8)),url('bacgrdimglogo.jpg');
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 60px;
+
+}
+
+.our-services{
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+.our-services h3{
+  font-size: 30px;
+  font-family: 'Cinzel', serif;
+  color: #ebe6e6;
+}
+.our-services p{
+  text-align: start;
+  font-size: 18px;
+  font-family: 'Philosopher', sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: #ebe6e6;
+}
+
+
+.our-team{
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+.our-team h3{
+  font-size: 30px;
+  font-family: 'Cinzel', serif;
+  color: #ebe6e6;
+}
+.our-team p{
+  text-align: start;
+  font-size: 18px;
+  font-family: 'Philosopher', sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: #ebe6e6;
+}
+
+@media(max-width:600px){
+  .bakgrdimgforour-container{
+    height: 100;
+  }
+  .our-services{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom:0px;
+  }
+  .our-services h3{
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    color: #ebe6e6;
+  }
+  .our-services p{
+    text-align: start;
+    font-size: 13px;
+    font-family: 'Philosopher', sans-serif;
+    word-spacing: 4px;
+    line-height: 17px;
+    color: #ebe6e6;
+  }
+
+  .our-team{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .our-team h3{
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    color: #ebe6e6;
+  }
+  .our-team p{
+    text-align: start;
+    font-size: 13px;
+    font-family: 'Philosopher', sans-serif;
+    word-spacing: 4px;
+    line-height: 17px;
+    color: #ebe6e6;
+    
+  }
+
+}
+
+
+@media(max-width:1100px){
+  .our-services p{
+    font-size: 15px;
+  }
+  .our-services h3{
+    font-size: 20px;
+  }
+  .our-team p{
+    font-size: 15px;
+  }
+  .our-team h3{
+    font-size: 20px;
+  }
+  .bakgrdimgforour-container{
+    height: 125vh;
+  }
+}
+
+/*---------------------------------contact us---------------------------------*/
+.contact{
+text-align: center;
+padding-top: 50px;
+padding-bottom:20px;
+}
+
+.contact h3{
+  font-family: 'Cinzel', serif;
+  font-size: 35px;
+  color: #d81204;
+  
+}
+.contact p{
+  font-family: 'Philosopher', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.contact i{
+color:#d81204;
+}
+
+
+@media(max-width:600px){
+  .location{
+    height:auto;
+    width: auto;
+    
+  }
+}
+
+
+/*---------------------------------footer---------------------------------*/
+footer{
+  background: linear-gradient(rgba(236, 1, 1, 0.8),rgba(231, 3, 3, 0.8),rgba(88, 3, 3, 0.8)),url('bacgrdimglogo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:10vh;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.icons i{
+  color: rgb(241, 223, 223);
+  font-size: 18px;
+  
+}
+.icons p{
+  color: white;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  
+}
+
+
+/*---------------------------------view---------------------------------*/
+.gallery-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+ 
+  
+}
+
+.gallery-view img {
+  width: 100%;
+  height: 240px;
+  border: 3px solid #d81204;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-view img:hover {
+  transform: scale(1.1);
+}
+.view-heading{
+  text-align: center;
+  background: linear-gradient(rgba(236, 1, 1, 0.8),rgba(231, 3, 3, 0.8),rgba(88, 3, 3, 0.8)),url('bacgrdimglogo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.view-heading h1{
+  color: #fcf4f4;
+  font-size: 50px;
+}
+
+@media(max-width:600px){
+  .view-heading h1{
+    font-size: 25px;
+  }
+
+  .gallery-view img{
+    height: 390px;
+  }
+}
+
+/*---------------------------------location--------------------------------*/
+
+.location{
+  padding-bottom: 200px;
+  text-align: center; 
+}
+
+@media(max-width:600px){
+
+  .location{
+    padding-bottom: 100px;
+  }
+  .location iframe{
+    height: 250px;
+    width: 400px;
+  }
+
+}
